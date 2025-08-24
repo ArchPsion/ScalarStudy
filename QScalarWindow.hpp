@@ -292,10 +292,10 @@ QScalarWindow::QScalarWindow(void) :
 		longer = true;
 	}
 	
-	QScalarWindow::positiveCloneTable->setMinimumWidth(1'200);
+	QScalarWindow::positiveCloneTable->setMinimumWidth(1'000);
 	QScalarWindow::positiveCloneTable->setMouseTracking(true);
 	
-	QScalarWindow::negativeCloneTable->setMinimumWidth(1'200);
+	QScalarWindow::negativeCloneTable->setMinimumWidth(1'000);
 	QScalarWindow::negativeCloneTable->setMouseTracking(true);
 	
 	const auto gLayout = new QGridLayout(new QWidget());
@@ -443,6 +443,7 @@ void QScalarWindow::analyse(void)
 HexCheckFile QScalarWindow::check(MissionEnum msn)
 {
 	HexCheckFile foo;
+	
 	foo.directory = QScalarWindow::choiceBox->currentText();
 	foo.numberOfDays = QScalarWindow::numberOfDaysEdit->text().toUInt();
 	
